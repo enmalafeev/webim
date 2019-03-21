@@ -1,7 +1,7 @@
 export default {
   login(appId, perms) {
     return new Promise((resolve, reject) => {
-      VK.init({ appId: appId });
+      VK.init({ apiId: appId });
       VK.Auth.login(response => {
         if (response.session) {
           resolve(response);
