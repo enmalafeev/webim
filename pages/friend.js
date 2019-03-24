@@ -1,6 +1,6 @@
 import View from '../view.js';
 
-const resultsNode = document.getElementById('#results');
+const resultsNode = document.querySelector('#results');
 let friend = {};
 
 export default {

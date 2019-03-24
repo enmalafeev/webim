@@ -8,11 +8,11 @@ function getRouteInfo() {
 }
 
 function handleHash() {
-  const { name } = getRouteInfo();
+  const { name, params } = getRouteInfo();
 
   if (name) {
     const routeName = name + 'Route';
-    Controller[routeName]();
+    Controller[routeName](params);
   }
 }
 
