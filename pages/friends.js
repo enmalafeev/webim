@@ -1,0 +1,14 @@
+import View from '../view.js';
+
+const resultsNode = document.getElementById('#results');
+let items = [];
+
+export default {
+  setData(newItems) {
+    items = newItems;
+  },
+
+  render() {
+    resultsNode.innerHTML = View.render('friends', { list: items });
+  }
+}
