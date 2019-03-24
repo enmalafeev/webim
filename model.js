@@ -29,6 +29,6 @@ export default {
     return this.callApi('users.get', params)
   },
   getFriends(params = {}) {
-    return this.callApi('friend.get', pararms)
+    return this.callApi('friends.get', params)
   }
 }
