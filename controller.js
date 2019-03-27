@@ -2,6 +2,19 @@ import Model from './model.js';
 import friendsPage from './pages/friends.js';
 import friendPage from './pages/friend.js';
 
+const friendsNavNode = document.querySelector('[data-role=nav-friends]');
+
+let activeNavNode;
+
+function setActiveNavNode(node) {
+  if (activeNavNode) {
+    activeNavNode.classList.remove('active');
+  }
+
+  activeNavNode = node;
+  activeNavNode.classList.add('active');
+}
+
 export default {
   async friendsRoute(params) {
     if (params.id) {
@@ -15,5 +28,7 @@ export default {
       friendsPage.setData(friends.items);
       friendsPage.render();
     }
+
+    setActiveNavNode(friendsNavNode);
   }
-}
+};
